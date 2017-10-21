@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title>Profile Picture</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-image">
+    <img src="{{imgurl}}">
+    <!-- <img src="{{https://o.aolcdn.com/images/dims3/GLOB/crop/1200x630+0+0/resize/1200x630!/format/jpg/quality/85/http%3A%2F%2Fimg.huffingtonpost.com%2Fasset%2F1200_630%2F597b3f6c1a00009bc1dc0f9c.png%3Fcache%3DTSSlf8Zu5s}}"> -->
+  </div>
+  <div>
+    <button ion-button round outline (click)="chooseimage()">Choose an image</button>
+  </div>
+  <div [hidden]="!moveon">
+    <button ion-button round outline (click)="proceed()">Skip this step</button>
+  </div>
+  <div [hidden]="moveon">
+    <button ion-button round outline (click)="updateproceed()">Upload & proceed</button>
+  </div>
+</ion-content>
